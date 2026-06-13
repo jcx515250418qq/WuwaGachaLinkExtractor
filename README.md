@@ -53,7 +53,7 @@
 #### 1. 单次抓取
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1')))
+powershell -NoExit -Command "iex (irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1')"
 ```
 
 #### 2. 输出 JSON
@@ -61,7 +61,7 @@
 适合其他程序调用：
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson"
 ```
 
 #### 3. 持续监听
@@ -69,13 +69,13 @@
 适合先运行脚本，再进入游戏打开抽卡记录页：
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch"
 ```
 
 #### 4. 自动复制链接
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Copy
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Copy"
 ```
 
 #### 5. 输出 AccessToken
@@ -83,13 +83,13 @@
 默认不输出敏感字段，如需输出：
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson -IncludeAccessToken
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson -IncludeAccessToken"
 ```
 
 #### 6. 自定义监听间隔
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch -IntervalSeconds 2
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch -IntervalSeconds 2"
 ```
 
 ### 参数说明
@@ -204,7 +204,7 @@ The following commands execute the script directly from the GitHub Raw URL, with
 #### 1. One-time capture
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1')))
+powershell -NoExit -Command "iex (irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1')"
 ```
 
 #### 2. Output as JSON
@@ -212,7 +212,7 @@ The following commands execute the script directly from the GitHub Raw URL, with
 Recommended for programmatic usage:
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson"
 ```
 
 #### 3. Watch mode
@@ -220,13 +220,13 @@ Recommended for programmatic usage:
 Run the script first, then open the gacha record page in-game:
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch"
 ```
 
 #### 4. Copy the URL automatically
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Copy
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Copy"
 ```
 
 #### 5. Include AccessToken
@@ -234,13 +234,13 @@ Run the script first, then open the gacha record page in-game:
 Sensitive fields are hidden by default. To include `accessToken`:
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson -IncludeAccessToken
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson -IncludeAccessToken"
 ```
 
 #### 6. Custom polling interval
 
 ```powershell
-& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch -IntervalSeconds 2
+powershell -NoExit -Command "& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch -IntervalSeconds 2"
 ```
 
 ### Parameters
