@@ -48,10 +48,12 @@
 
 ### 使用方法
 
+以下命令基于 GitHub Raw 链接远程调用脚本，无需手动下载到本地：
+
 #### 1. 单次抓取
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1')))
 ```
 
 #### 2. 输出 JSON
@@ -59,7 +61,7 @@ powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1
 适合其他程序调用：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -AsJson
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson
 ```
 
 #### 3. 持续监听
@@ -67,13 +69,13 @@ powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -AsJson
 适合先运行脚本，再进入游戏打开抽卡记录页：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -Watch
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch
 ```
 
 #### 4. 自动复制链接
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -Copy
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Copy
 ```
 
 #### 5. 输出 AccessToken
@@ -81,13 +83,13 @@ powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -Copy
 默认不输出敏感字段，如需输出：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -AsJson -IncludeAccessToken
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson -IncludeAccessToken
 ```
 
 #### 6. 自定义监听间隔
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -Watch -IntervalSeconds 2
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch -IntervalSeconds 2
 ```
 
 ### 参数说明
@@ -197,10 +199,12 @@ The script automatically:
 
 ### Usage
 
+The following commands execute the script directly from the GitHub Raw URL, without downloading the file manually:
+
 #### 1. One-time capture
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1')))
 ```
 
 #### 2. Output as JSON
@@ -208,7 +212,7 @@ powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1
 Recommended for programmatic usage:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -AsJson
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson
 ```
 
 #### 3. Watch mode
@@ -216,13 +220,13 @@ powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -AsJson
 Run the script first, then open the gacha record page in-game:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -Watch
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch
 ```
 
 #### 4. Copy the URL automatically
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -Copy
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Copy
 ```
 
 #### 5. Include AccessToken
@@ -230,13 +234,13 @@ powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -Copy
 Sensitive fields are hidden by default. To include `accessToken`:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -AsJson -IncludeAccessToken
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -AsJson -IncludeAccessToken
 ```
 
 #### 6. Custom polling interval
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Get-WuwaGachaLink.ps1 -Watch -IntervalSeconds 2
+& ([scriptblock]::Create((irm 'https://raw.githubusercontent.com/jcx515250418qq/WuwaGachaLinkExtractor/main/Get-WuwaGachaLink.ps1'))) -Watch -IntervalSeconds 2
 ```
 
 ### Parameters
